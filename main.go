@@ -19,7 +19,7 @@ func main() {
 	fmt.Println(longestString)
 }
 
-// Count vowals and find the string which has most.
+// Count vowels and find the string which has most.
 func vowelCounter(longestStrings []string) string {
 	var result string
 	var mostVawal int = 0
@@ -27,7 +27,7 @@ func vowelCounter(longestStrings []string) string {
 		count := 0
 		for _, char := range s {
 			switch char {
-			case 'a', 'e', 'i', 'o', 'u': //Vowals list.
+			case 'a', 'e', 'i', 'o', 'u': //Vowels list.
 				count++
 			}
 			if count >= mostVawal {
