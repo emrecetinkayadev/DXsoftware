@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2 style="color:blue">JavaScript HTML DOM</h2>
+
+<div id="main">
+<p>Finding HTML Elements by Tag Name</p>
+<p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+</div>
+
+<div>
+    <button type="button" id="btn1" onClick="case1()">Button1</button>
+</div>
+<div>
+    <button type="button" id="btn2" onClick="case2()">Button2</button>
+</div>
+
+<p id="demo">demo</p>
+
+<script>
+const x = document.getElementById("main");
+const y = x.getElementsByTagName("p");
+var demoP = document.getElementById("demo");
+
+document.getElementById("demo").innerHTML = 
+'The first paragraph (index 0) inside "main" is: ' + y[0].innerHTML;
+
+function case1() {
+    var demoP = document.getElementById("demo");
+    demoP.value = "The function 'test' is executed";
+    demoP.innerText = "The function 'test' is executed";
+}
+
+function case2() {
+    var demoP = document.getElementById("demo");
+    demoP.value = "This example demonstrates the <b>getElementsByTagName</b> method.";
+    demoP.innerText = "This example demonstrates the <b>getElementsByTagName</b> method.";
+}
+    
+
+</script>
+
+</body>
+</html>
+
+<!-- 
+	HTML:
+    - Add 2 buttons to the html
+    
+    CSS:
+    - make the title blue
+    
+    JS:
+    - When the button 1 is clicked, the "demo" p get the value of the first p of the page
+    - When the button 2 is clicked, the "demo" p get the value of the second p of the page
+-->
